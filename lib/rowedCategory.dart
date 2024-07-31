@@ -60,7 +60,7 @@ void arifmetika(){
 
     }
     print('i5    ----- $i5');
-    return Scaffold(appBar: AppBar(title: Text('SELECT A CATEGORIES !!!',
+    return Scaffold(appBar: AppBar(title: Text('SELECT A CATEGORIES ',
                                             style: TextStyle(fontSize: 28,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.white),
