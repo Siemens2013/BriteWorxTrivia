@@ -28,7 +28,7 @@ class _RawedCategoriesState extends State<RawedCategories> {
   double kolichestvo=10;
   int uzunlik=0;
   int nbrcol=3;
-  int kolich_a=8;
+  int kolich_a=15;
   int b=3;
   int ostatok=0;
   int sceloe=0;
@@ -59,7 +59,7 @@ void arifmetika(){
       return Container();
 
     }
-    print('i5    ----- $i5');
+    print('i5    ----- $i5');i5=0;
     return Scaffold(appBar: AppBar(title: Text('SELECT A CATEGORIES ',
                                             style: TextStyle(fontSize: 28,
                                                 fontWeight: FontWeight.bold,
@@ -68,7 +68,8 @@ void arifmetika(){
                                            centerTitle: true,backgroundColor: Colors.grey,
                                                 ),
 
-      body: Column(
+      body:
+      Column(
         children: [
 
           for (int i3=0; i3<sceloe; i3++)
