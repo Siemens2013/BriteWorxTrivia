@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:briteworxtrivia/containerBuilder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class RawedCategories extends StatefulWidget {
   const RawedCategories({super.key});
@@ -14,7 +15,7 @@ class _RawedCategoriesState extends State<RawedCategories> {
   List _elements=[];
   int i1=0;
   Future <void> readJason() async{
-    final String response =await rootBundle.loadString('assets/Categories.json');
+    final String response =await rootBundle.loadString('assets/Game_Topic.json');
     final data = await json.decode(response);
     setState(() {
       _elements=data["items"];
@@ -27,9 +28,9 @@ class _RawedCategoriesState extends State<RawedCategories> {
   double fntSize_c=0;
   double kolichestvo=10;
   int uzunlik=0;
-  int nbrcol=3;
-  int kolich_a=15;
-  int b=3;
+  int nbrcol=2;
+  int kolich_a=17;        //Number of Containers depends on length of json
+  int b=2;
   int ostatok=0;
   int sceloe=0;
   int i5=0;
@@ -43,7 +44,6 @@ void arifmetika(){
   sceloe=kolich_a~/b;
   print('Ostatok = $ostatok');
   print('Seloe chislo= $sceloe');
-
   }
 
   void initState(){
@@ -60,31 +60,46 @@ void arifmetika(){
 
     }
     print('i5    ----- $i5');i5=0;
-    return Scaffold(appBar: AppBar(title: Text('SELECT A CATEGORIES ',
-                                            style: TextStyle(fontSize: 28,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white),
-                                                                  ),
-                                           centerTitle: true,backgroundColor: Colors.grey,
-                                                ),
+    return Scaffold(appBar: AppBar(title: Text('SELECT A GAME', style:
+      TextStyle(fontSize: 35, fontWeight: FontWeight.w900,height: 75 ,
+          color: Colors.white),
+    ),
+    centerTitle: true,backgroundColor: Color.fromRGBO(56, 11, 112, 1)
+      ,),
+        backgroundColor: Color.fromRGBO(56, 11, 112, 1),
 
       body:
-      Column(
-        children: [
 
-          for (int i3=0; i3<sceloe; i3++)
+      Container(height: double.infinity, width: double.infinity,
+        decoration: BoxDecoration(image: 
+        ),
 
-          Row(
-            children: [
-              for (int i=0; i<nbrcol; i++)
-              ContainerBuilder(hght: 24, wdth:99, txt: _elements[i5++]['Category'][0], fntSize: 12),
-            ],
+        child: Scrollbar(interactive: true,thickness: 5,
+          scrollbarOrientation: ScrollbarOrientation.right,
+          thumbVisibility: true, radius: Radius.elliptical(19,19),
+          child: SingleChildScrollView(scrollDirection: Axis.vertical,
+
+            child: Column(
+              children: [
+            
+                for (int i3=0; i3<sceloe; i3++)
+            
+                Row(
+                  children: [
+                    for (int i=0; i<nbrcol; i++)
+                    ContainerBuilder(hght: 110, wdth:225,
+                        txt: _elements[i5++]['Category'][0], fntSize: 24),
+                  ],
+                ),
+                Row(children: [
+                  for (int i4=0; i4<ostatok; i4++)
+                    ContainerBuilder(hght: 110 , wdth:225,
+                        txt: _elements[i5++]['Category'][0], fntSize: 24),
+                ],)
+              ],
+            ),
           ),
-          Row(children: [
-            for (int i4=0; i4<ostatok; i4++)
-              ContainerBuilder(hght: 24, wdth:99, txt: _elements[i5++]['Category'][0], fntSize: 12),
-          ],)
-        ],
+        ),
       )
 
 
