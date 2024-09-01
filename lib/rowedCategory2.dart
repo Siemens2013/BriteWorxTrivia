@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class RawedCategories1 extends StatefulWidget {
-  const RawedCategories1({super.key});
+class RawedCategories extends StatefulWidget {
+  const RawedCategories({super.key});
 
   @override
-  State<RawedCategories1> createState() => _RawedCategories1State();
+  State<RawedCategories> createState() => _RawedCategoriesState();
 }
 
-class _RawedCategories1State extends State<RawedCategories1> {
+class _RawedCategoriesState extends State<RawedCategories> {
   List _elements=[];
   int i1=0;
   Future <void> readJason() async{
@@ -66,10 +66,42 @@ void arifmetika(){
     ),
     centerTitle: true,backgroundColor: Color.fromRGBO(56, 11, 112, 1)
       ,),
-        body:
-        SvgPicture.asset('assets/images/Group 644.svg',),
         backgroundColor: Color.fromRGBO(56, 11, 112, 1),
-        //SvgPicture.asset('assets/images/Group 644.svg'),
+
+      body:
+
+      Container(height: double.infinity, width: double.infinity,
+        decoration: BoxDecoration(image:DecorationImage(image: AssetImage('assets/images/Screen1.png')
+        ) ),
+
+        child: Scrollbar(interactive: true,thickness: 5,
+          scrollbarOrientation: ScrollbarOrientation.right,
+          thumbVisibility: true, radius: Radius.elliptical(19,19),
+          child: SingleChildScrollView(scrollDirection: Axis.vertical,
+
+            child: Column(
+              children: [
+            
+                for (int i3=0; i3<sceloe; i3++)
+            
+                Row(
+                  children: [
+                    for (int i=0; i<nbrcol; i++)
+                    ContainerBuilder(hght: 120, wdth:100,
+                        txt: _elements[i5++]['Category'][0], fntSize: 12),
+                  ],
+                ),
+                Row(children: [
+                  for (int i4=0; i4<ostatok; i4++)
+                    ContainerBuilder(hght: 110 , wdth:225,
+                        txt: _elements[i5++]['Category'][0], fntSize: 24),
+                ],)
+              ],
+            ),
+          ),
+        ),
+      )
+
 
     );
   }

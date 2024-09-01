@@ -1,5 +1,7 @@
 import 'package:briteworxtrivia/main.dart';
 import 'package:briteworxtrivia/rowedCategory.dart';
+import 'package:briteworxtrivia/rowedCategory.dart';
+import 'package:briteworxtrivia/rowedCategory2.dart';
 import 'package:flutter/material.dart';
 import 'package:briteworxtrivia/selectCategory.dart';
 

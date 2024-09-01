@@ -32,12 +32,13 @@ class _ContainerBuilderState extends State<ContainerBuilder> {
   Widget build(BuildContext context) {
     return
       Padding(
-        padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+        padding: const EdgeInsets.fromLTRB(40, 0, 100, 0),
         child: Container(decoration: BoxDecoration(image: DecorationImage(image:
         AssetImage('assets/images/Knopka.png'))),
           height: widget.hght,width: widget.wdth,
          child: Center(child: Text(widget.txt,
-                style: TextStyle(fontSize: widget.fntSize, color: Colors.white),)),
+                style: TextStyle(fontSize: widget.fntSize,
+                    color: Colors.white),)),
         ),
       );
 

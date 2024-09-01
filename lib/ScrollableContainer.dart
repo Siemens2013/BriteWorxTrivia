@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:briteworxtrivia/briteWorxTrivia.dart';
-import 'package:briteworxtrivia/rowedCategory.dart';
+import 'package:briteworxtrivia/rowedCategory2.dart';
 
 class ScrollableContainer extends StatefulWidget {
   const ScrollableContainer({super.key});
