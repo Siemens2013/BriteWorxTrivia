@@ -1,10 +1,14 @@
+import 'dart:ffi';
+//import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'package:briteworxtrivia/Test.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 
 class Testknopki extends StatefulWidget {
-  const Testknopki({super.key});
+  late final String txt;
+   Testknopki({super.key, required this.txt});
 
   @override
   State<Testknopki> createState() => _TestknopkiState();
@@ -13,6 +17,8 @@ class Testknopki extends StatefulWidget {
 class _TestknopkiState extends State<Testknopki> {
   String svgloader='assets/images/Knopka.svg';
   String txtColor='Colors.white';
+  double fntsize=18;
+  bool pressed=false;
   @override
   int abc=0;
   Widget build(BuildContext context) {
@@ -24,13 +30,18 @@ class _TestknopkiState extends State<Testknopki> {
             children:[
               SvgPicture.asset(svgloader, height: 36,width: 115),
               Padding(
-                padding: const EdgeInsets.fromLTRB(23, 2, 25,0),
-                child: Text("Game Topic", style: TextStyle(color: Colors.white,
-                fontSize: 22, fontWeight: FontWeight.bold),)
+                padding: const EdgeInsets.fromLTRB(20, 2, 20,0),
+                child: Text(widget.txt, style: TextStyle(color: Colors.white,
+                fontSize: fntsize, fontWeight: FontWeight.bold),)
               ),
             ]
           ),
-          onTap: (){print(abc); abc++;},
+          onTap: (){setState(() {(svgloader='assets/images/Disabled.svg');
+              fntsize=0;
+
+
+          });},
+
         ),
       );
   }

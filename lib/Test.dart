@@ -27,15 +27,15 @@ class _TestState extends State<Test> {
     print('sceloe    $sceloe');
   }
 
-int i=0, i1=0, ostatok=0, sceloe=0,obshee=0;
+int i=0, i1=0,i2=0, ostatok=0, sceloe=0,obshee=0;
   @override
   void initState(){
     readJason();
 
     super.initState();
   }
-
   Widget build(BuildContext context) {
+    i2=0;
     return Scaffold(appBar: AppBar(title: Text("Game Topic", style: TextStyle(color: Colors.white,
         fontSize: 38, fontWeight: FontWeight.bold),
     ),centerTitle: true,
@@ -53,13 +53,14 @@ int i=0, i1=0, ostatok=0, sceloe=0,obshee=0;
            Row(children:
            [
              for (i=0;i<2;i++)
-             Testknopki(),
+             Testknopki(txt: _elements[i2++]['Category'][0],),
+
            ],
 
                ),
            Row(children: [
              for(i=0;i<ostatok;i++)
-               Testknopki(),
+               Testknopki(txt: _elements[i2++]['Category'][0],),
 
            ],)
          ],
