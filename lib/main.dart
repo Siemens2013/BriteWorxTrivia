@@ -1,3 +1,4 @@
+import 'package:briteworxtrivia/GameTitle.dart';
 import 'package:briteworxtrivia/rowedCategory.dart';
 import 'package:briteworxtrivia/selectCategory.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,9 @@ void main()=>runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
  home:
   //RawedCategories1(),
- // BriteWorxTrivia(),
- Test(),
+ BriteWorxTrivia(),
+ //Test(),
+   //    Gametitle(),
  //RawedCategories(),
 ),
 );

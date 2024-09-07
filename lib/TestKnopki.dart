@@ -1,6 +1,5 @@
 import 'dart:ffi';
-//import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
-
+import 'package:briteworxtrivia/GameTitle.dart';
 import 'package:flutter/material.dart';
 import 'package:briteworxtrivia/Test.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,7 +7,10 @@ import 'package:flutter/services.dart';
 
 class Testknopki extends StatefulWidget {
   late final String txt;
-   Testknopki({super.key, required this.txt});
+  late final int abcd;
+  //String Gmttl1;
+
+   Testknopki({super.key, required this.txt,required this.abcd, });
 
   @override
   State<Testknopki> createState() => _TestknopkiState();
@@ -16,7 +18,7 @@ class Testknopki extends StatefulWidget {
 
 class _TestknopkiState extends State<Testknopki> {
   String svgloader='assets/images/Knopka.svg';
-  String txtColor='Colors.white';
+
   double fntsize=18;
   bool pressed=false;
   @override
@@ -37,9 +39,15 @@ class _TestknopkiState extends State<Testknopki> {
             ]
           ),
           onTap: (){setState(() {(svgloader='assets/images/Disabled.svg');
-              fntsize=0;
-
-
+          //Future.delayed(Duration(seconds: 15));
+            fntsize=0; print(widget.abcd);
+            Future.delayed(const Duration(seconds: 3), ()
+          {
+            if (widget.abcd==1) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Gametitle()));}
+          }
+            );
           });},
 
         ),

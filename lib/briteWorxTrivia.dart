@@ -1,3 +1,4 @@
+import 'package:briteworxtrivia/Test.dart';
 import 'package:briteworxtrivia/main.dart';
 import 'package:briteworxtrivia/rowedCategory.dart';
 import 'package:briteworxtrivia/rowedCategory.dart';
@@ -27,7 +28,7 @@ class _BriteWorxTriviaState extends State<BriteWorxTrivia> {
 
               FilledButton(onPressed: (){
                Navigator.push(context,
-                   MaterialPageRoute(builder: (context) => RawedCategories()));
+                   MaterialPageRoute(builder: (context) => Test()));
 
               },
 
