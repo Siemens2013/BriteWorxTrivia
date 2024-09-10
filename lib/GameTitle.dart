@@ -1,12 +1,13 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:briteworxtrivia/optionButton.dart';
+int lengthJson=0;
+int optionNum=0;
 class Gametitle extends StatefulWidget {
-
-   Gametitle({super.key});
+final String pathJson;
+   Gametitle({super.key, required this.pathJson});
 
   @override
   State<Gametitle> createState() => _GametitleState();
@@ -15,7 +16,7 @@ class Gametitle extends StatefulWidget {
 class _GametitleState extends State<Gametitle> {
   List _elements=[];
   Future <void> readJason() async {
-    final String response = await rootBundle.loadString('assets/Geographic.json');
+    final String response = await rootBundle.loadString(widget.pathJson);
     final data = await json.decode(response);
     setState(() {
       _elements = data["items"];
@@ -24,12 +25,14 @@ class _GametitleState extends State<Gametitle> {
   }
   @override
   void initState(){
-    readJason();
+
+      readJason();
 
     super.initState();
   }
   Widget build(BuildContext context) {
     readJason();
+    lengthJson=_elements.length;
     if (_elements.isEmpty){
       return Container();
     }
@@ -50,15 +53,52 @@ class _GametitleState extends State<Gametitle> {
             Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(39, 60, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(39, 8, 0, 0),
                       child: Image.asset('assets/images/ImageFromJSN.png', height: 160,),
                     ),
                     SizedBox(width: 10),
-                    Container(height: 100, width: 258, color: Color.fromRGBO(56, 11, 112, 1), child: Center(child: Text(_elements[0]['title'], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24), textAlign: TextAlign.center),),),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 58, 0, 0),
+                          child: Container(height: 100, width: 258, color: Color.fromRGBO(56, 11, 112, 1), child: Center(child: Text(_elements[indexJson]['title'], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24), textAlign: TextAlign.center),),),
+                        ),
+                        SizedBox(height: 4),
+                       Column(children: [
+                         Row(
+                           children: [
+                             Optionbutton(assetPath: 'assets/images/Option_q.png',jsonOption: _elements[indexJson]['choices'][0],choice1: 0,),
+                             SizedBox(width: 8),
+                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][1],choice1: 1,),
+                           ],
+                         ),
+                         SizedBox(height: 8),
+                         Row(
+                           children: [
+                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][2],choice1: 2,),
+                             SizedBox(width: 8),
+                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][3],choice1: 3,),
+                           ],
+                         ),
+                         SizedBox(height: 8),
+                         Optionbutton(assetPath: 'assets/images/ShowAnswerButton.png',jsonOption: "",choice1: 4,),
 
+                       ],
+                       )
+                      ],
+                    ),
                   ],
             ),
+              Positioned(
+                  right: 0,
 
+                  child: Row(
+                    children: [
+                      Container(height: 25, width: 25, color: Colors.white,),
+                      SizedBox(width: 4,),
+                      Container(height: 25, width: 25, color: Colors.white,),
+                    ],
+                  ))
           ],
           )
       

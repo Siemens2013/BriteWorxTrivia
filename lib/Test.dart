@@ -27,7 +27,7 @@ class _TestState extends State<Test> {
     print('sceloe    $sceloe');
   }
 
-int i=0, i1=0,i2=0, a=0, ostatok=0, sceloe=0,obshee=0;
+int i=0, i1=0,i2=0,i3=0, a=0, ostatok=0, sceloe=0,obshee=0;
   @override
   void initState(){
     readJason();
@@ -56,7 +56,7 @@ int i=0, i1=0,i2=0, a=0, ostatok=0, sceloe=0,obshee=0;
              for (i=0;i<2;i++)
 
              Testknopki(txt: _elements[i2++]['Category'][0],abcd:  i2,
-
+                path1: _elements[i3++]['GameTitle'][0],
              ),
 
            ],
@@ -65,6 +65,7 @@ int i=0, i1=0,i2=0, a=0, ostatok=0, sceloe=0,obshee=0;
            Row(children: [
              for(i=0;i<ostatok;i++)
                Testknopki(txt: _elements[i2++]['Category'][0],abcd:  i2,
+                 path1: _elements[i3++]['GameTitle'][0],
                ),
 
            ],)

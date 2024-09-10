@@ -8,9 +8,10 @@ import 'package:flutter/services.dart';
 class Testknopki extends StatefulWidget {
   late final String txt;
   late final int abcd;
+String path1;
   //String Gmttl1;
 
-   Testknopki({super.key, required this.txt,required this.abcd, });
+   Testknopki({super.key, required this.txt,required this.abcd, required this.path1 });
 
   @override
   State<Testknopki> createState() => _TestknopkiState();
@@ -45,7 +46,7 @@ class _TestknopkiState extends State<Testknopki> {
           {
             if (widget.abcd==1) {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Gametitle()));}
+                MaterialPageRoute(builder: (context) => Gametitle(pathJson: widget.path1)));}
           }
             );
           });},
