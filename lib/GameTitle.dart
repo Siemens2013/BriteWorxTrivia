@@ -5,6 +5,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:briteworxtrivia/optionButton.dart';
 int lengthJson=0;
 int optionNum=0;
+int pressChoice=0;
+Color clr0=Color.fromRGBO(249, 226, 166, 1);
+Color clr1=Color.fromRGBO(249, 226, 166, 1);
+Color clr2=Color.fromRGBO(249, 226, 166, 1);
+Color clr3=Color.fromRGBO(249, 226, 166, 1);
 class Gametitle extends StatefulWidget {
 final String pathJson;
    Gametitle({super.key, required this.pathJson});
@@ -36,6 +41,8 @@ class _GametitleState extends State<Gametitle> {
     if (_elements.isEmpty){
       return Container();
     }
+
+
     return Scaffold(backgroundColor: Color.fromRGBO(56, 11, 112, 1),
       body:
           Stack(children: [
@@ -54,7 +61,7 @@ class _GametitleState extends State<Gametitle> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.fromLTRB(39, 8, 0, 0),
-                      child: Image.asset('assets/images/ImageFromJSN.png', height: 160,),
+                      child: Image.asset(_elements[indexJson]['imagePath'], height: 160,),
                     ),
                     SizedBox(width: 10),
                     Column(
@@ -67,22 +74,41 @@ class _GametitleState extends State<Gametitle> {
                        Column(children: [
                          Row(
                            children: [
-                             Optionbutton(assetPath: 'assets/images/Option_q.png',jsonOption: _elements[indexJson]['choices'][0],choice1: 0,),
+                             Optionbutton(jsonOption: _elements[indexJson]['choices'][0],choice1: 0,
+                             clr: clr0),
                              SizedBox(width: 8),
-                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][1],choice1: 1,),
+                             Optionbutton( jsonOption: _elements[indexJson]['choices'][1],choice1: 1,
+                             clr: clr1),
                            ],
                          ),
                          SizedBox(height: 8),
                          Row(
                            children: [
-                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][2],choice1: 2,),
+                             Optionbutton( jsonOption: _elements[indexJson]['choices'][2],choice1: 2,
+                             clr: clr2),
                              SizedBox(width: 8),
-                             Optionbutton(assetPath: 'assets/images/Option_q.png', jsonOption: _elements[indexJson]['choices'][3],choice1: 3,),
+                             Optionbutton( jsonOption: _elements[indexJson]['choices'][3],choice1: 3,
+                             clr: clr3),
                            ],
                          ),
                          SizedBox(height: 8),
-                         Optionbutton(assetPath: 'assets/images/ShowAnswerButton.png',jsonOption: "",choice1: 4,),
-
+                         GestureDetector(
+                           child: Container(height: 23,width: 120, decoration: BoxDecoration(
+                               image: DecorationImage(image: AssetImage('assets/images/ShowAnswerButton.png')),
+                               borderRadius: BorderRadius.circular(10)),
+                           ),
+                           onTap: (){
+                           if (_elements[indexJson]['correctChoice']==0) {
+                             clr0=Color.fromRGBO(68, 193, 12, 1);
+                           }
+                           else { if (_elements[indexJson]['correctChoice']==1) {
+                             clr1=Color.fromRGBO(68, 193, 12, 1);
+                           } else { if (_elements[indexJson]['correctChoice']==2) {
+                            clr2=Color.fromRGBO(68, 193, 12, 1);}
+                             else { clr3=Color.fromRGBO(68, 193, 12, 1);}
+                                 }}
+                           },
+                         ),
                        ],
                        )
                       ],
