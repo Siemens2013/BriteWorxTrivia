@@ -6,6 +6,7 @@ import 'package:briteworxtrivia/optionButton.dart';
 int lengthJson=0;
 int optionNum=0;
 int pressChoice=0;
+int answerchoice=0;
 Color clr0=Color.fromRGBO(249, 226, 166, 1);
 Color clr1=Color.fromRGBO(249, 226, 166, 1);
 Color clr2=Color.fromRGBO(249, 226, 166, 1);
@@ -42,7 +43,7 @@ class _GametitleState extends State<Gametitle> {
       return Container();
     }
 
-
+    answerchoice=_elements[indexJson]['correctChoice'];
     return Scaffold(backgroundColor: Color.fromRGBO(56, 11, 112, 1),
       body:
           Stack(children: [
