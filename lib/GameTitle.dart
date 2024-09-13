@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,8 +12,11 @@ Color clr0=Color.fromRGBO(249, 226, 166, 1);
 Color clr1=Color.fromRGBO(249, 226, 166, 1);
 Color clr2=Color.fromRGBO(249, 226, 166, 1);
 Color clr3=Color.fromRGBO(249, 226, 166, 1);
+String chgPctr='assets/images/DisabledNext.png';
+bool isPressed=false;
 class Gametitle extends StatefulWidget {
 final String pathJson;
+
    Gametitle({super.key, required this.pathJson});
 
   @override
@@ -36,15 +40,23 @@ class _GametitleState extends State<Gametitle> {
 
     super.initState();
   }
+  int doublicat=0;
   Widget build(BuildContext context) {
     readJason();
     lengthJson=_elements.length;
     if (_elements.isEmpty){
       return Container();
     }
-
+    if (isPressed==false){
+      chgPctr='assets/images/DisabledNext.png';
+    }
+    else{
+      chgPctr='assets/images/ActiveNext.png';
+    }
     answerchoice=_elements[indexJson]['correctChoice'];
-    return Scaffold(backgroundColor: Color.fromRGBO(56, 11, 112, 1),
+    return Scaffold(
+
+        backgroundColor: Color.fromRGBO(56, 11, 112, 1),
       body:
           Stack(children: [
             Padding(
@@ -93,23 +105,45 @@ class _GametitleState extends State<Gametitle> {
                            ],
                          ),
                          SizedBox(height: 8),
-                         GestureDetector(
-                           child: Container(height: 23,width: 120, decoration: BoxDecoration(
-                               image: DecorationImage(image: AssetImage('assets/images/ShowAnswerButton.png')),
-                               borderRadius: BorderRadius.circular(10)),
+                         Row(
+                           children: [
+                             GestureDetector(        //SHOW ANSWER PUSH BUTTON
+                               child: Container(height: 23,width: 120, decoration: BoxDecoration(
+                                   image: DecorationImage(image: AssetImage('assets/images/ShowAnswerButton.png')),
+                                   borderRadius: BorderRadius.circular(10)),
+                               ),
+                               onTap: (){isPressed=true;
+                               if (_elements[indexJson]['correctChoice']==0) {
+                                 clr0=Color.fromRGBO(68, 193, 12, 1);
+                                 chgPctr='assets/images/ActiveNext.png';
+                               }
+                               else { if (_elements[indexJson]['correctChoice']==1) {
+                                 clr1=Color.fromRGBO(68, 193, 12, 1);
+                                 chgPctr='assets/images/ActiveNext.png';
+                               } else { if (_elements[indexJson]['correctChoice']==2) {
+                                clr2=Color.fromRGBO(68, 193, 12, 1);chgPctr='assets/images/ActiveNext.png';}
+
+                                 else { clr3=Color.fromRGBO(68, 193, 12, 1);
+                                   chgPctr='assets/images/ActiveNext.png';}
+                                     }}
+                               },
+                             ),
+                           GestureDetector(
+                             child: Container(height: 25, width: 25,  //NEXT BUTTON
+                             decoration: BoxDecoration(image: DecorationImage(
+                                 image: AssetImage(chgPctr))),
+                             ),
+                             onTap: (){if (isPressed==true){
+                               chgPctr='assets/images/DisabledNext.png';
+                               incrementOfjson();
+                             }
+                             },
+
                            ),
-                           onTap: (){
-                           if (_elements[indexJson]['correctChoice']==0) {
-                             clr0=Color.fromRGBO(68, 193, 12, 1);
-                           }
-                           else { if (_elements[indexJson]['correctChoice']==1) {
-                             clr1=Color.fromRGBO(68, 193, 12, 1);
-                           } else { if (_elements[indexJson]['correctChoice']==2) {
-                            clr2=Color.fromRGBO(68, 193, 12, 1);}
-                             else { clr3=Color.fromRGBO(68, 193, 12, 1);}
-                                 }}
-                           },
+                           ],
                          ),
+
+
                        ],
                        )
                       ],
@@ -121,14 +155,25 @@ class _GametitleState extends State<Gametitle> {
 
                   child: Row(
                     children: [
-                      Container(height: 25, width: 25, color: Colors.white,),
+                      GestureDetector(
+                        child: Container(height: 25, width: 25,
+                        decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/ExitButton.png'))),
+                        ),
+                      onTap: (){
+                          print('Vihodi otsuda');
+                      },
+
+                      ),
                       SizedBox(width: 4,),
-                      Container(height: 25, width: 25, color: Colors.white,),
+                      Container(height: 22  , width: 22,
+                      decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/Setting1.png'))),
+                      ),
                     ],
                   ))
           ],
           )
-      
+
     );
   }
 }
+

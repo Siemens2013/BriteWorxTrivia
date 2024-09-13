@@ -42,11 +42,18 @@ class _TestknopkiState extends State<Testknopki> {
           onTap: (){setState(() {(svgloader='assets/images/Disabled.svg');
           //Future.delayed(Duration(seconds: 15));
             fntsize=0; print(widget.abcd);
-            Future.delayed(const Duration(seconds: 3), ()
+            Future.delayed(const Duration(seconds: 1), ()
           {
             if (widget.abcd==1) {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Gametitle(pathJson: widget.path1)));}
+                MaterialPageRoute(builder: (context) => Gametitle(pathJson: widget.path1)));
+            }
+          if (widget.abcd==2) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Gametitle(pathJson: widget.path1)));
+
+          }
+
           }
             );
           });},
