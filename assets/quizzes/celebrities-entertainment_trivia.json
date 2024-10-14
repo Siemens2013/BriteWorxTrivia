@@ -1,0 +1,91 @@
+{
+  "category": "Celebrities",
+  "quizTitle": "Entertainment",
+  "questions": [
+    {
+      "questionTitle": "Who played the role of James Bond in the 1960s?",
+      "answers": ["Sean Connery", "Roger Moore", "Pierce Brosnan", "Timothy Dalton"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Which legendary musician was known as the “King of Rock ‘n’ Roll”?",
+      "answers": ["Michael Jackson", "Elvis Presley", "Frank Sinatra", "Bob Dylan"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "In the 1970s, who starred as the iconic TV detective Thomas Magnum in the series “Magnum, P.I.”?",
+      "answers": ["Burt Reynolds", "Don Johnson", "James Garner", "Tom Selleck"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which disco queen had hits like “I Will Survive” and “Never Can Say Goodbye”?",
+      "answers": ["Donna Summer", "Gloria Gaynor", "Diana Ross", "Cher"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Who portrayed the iconic character Luke Skywalker in the original “Star Wars” trilogy?",
+      "answers": ["Harrison Ford", "Mark Hamill", "Alec Guinness", "Billy Dee Williams"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which famous actress starred as Wonder Woman in the 1970s TV series?",
+      "answers": ["Jane Fonda", "Farrah Fawcett", "Lynda Carter", "Raquel Welch"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "Who was the lead singer of the rock band Queen?",
+      "answers": ["Freddie Mercury", "David Bowie", "Elton John", "James Caan"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "In the 1980s, who starred as the time-traveling Marty McFly in the “Back to the Future” trilogy?",
+      "answers": ["Keanu Reeves", "Tom Hanks", "Johnny Depp", "Michael J. Fox"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which legendary singer-songwriter released the album “Born to Run” in 1975?",
+      "answers": ["Bob Dylan", "Billy Joel", "Bruce Springsteen", "Neil Young"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "Who starred as Rick Blaine in the classic film “Casablanca” (1942)?",
+      "answers": ["Cary Grant", "Humphrey Bogart", "Clark Gable", "James Stewart"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "In which iconic Western movie did John Wayne portray the character Rooster Cogburn?",
+      "answers": ["The Good, the Bad and the Ugly", "High Noon", "Butch Cassidy and the Sundance Kid", "True Grit"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Who played the role of James Bond in the 1970s movie “The Spy Who Loved Me”?",
+      "answers": ["Sean Connery", "Roger Moore", "Timothy Dalton", "Pierce Brosnan"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which actor took ‘Captain Beaky’ into the 1980 charts?",
+      "answers": ["David Bowie", "Elton John", "Keith Michell", "Mick Jagger"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "What color did Chris De Burgh’s Lady wear in his hit of 1986?",
+      "answers": ["Blue", "Red", "Green", "Yellow"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Who had a 1960s hit with ‘Sweet Talkin’ Guy’?",
+      "answers": ["The Supremes", "The Ronettes", "The Shirelles", "The Chiffons"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which famous actor portrayed the character Vito Corleone in the film “The Godfather”?",
+      "answers": ["Al Pacino", "Marlon Brando", "Robert De Niro", "James Caan"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What is the name of the famous Roman arena where gladiator contests were held?",
+      "answers": ["The Circus Maximus", "The Forum", "The Pantheon", "The Colosseum"],
+      "correctAnswerIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "category": "Food",
+  "quizTitle": "Cuisine",
+  "questions": [
+    {
+      "questionTitle": "Which fruit is known as the “king of fruits”?",
+      "answers": ["Mango", "Banana", "Apple", "Orange"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What is the main ingredient in guacamole?",
+      "answers": ["Tomatoes", "Avocado", "Onions", "Peppers"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which spice is commonly used in curry dishes?",
+      "answers": ["Cinnamon", "Turmeric", "Paprika", "Nutmeg"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What type of seafood is used in a classic New England clam chowder?",
+      "answers": ["Shrimp", "Lobster", "Clams", "Salmon"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "Which vegetable is the main ingredient in ratatouille?",
+      "answers": ["Eggplant", "Zucchini", "Bell pepper", "Tomato"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What is the Italian dish made with thinly sliced raw beef, arugula, and Parmesan cheese?",
+      "answers": ["Risotto", "Bruschetta", "Frittata", "Carpaccio"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which nut is commonly used in pesto sauce?",
+      "answers": ["Almonds", "Walnuts", "Pine nuts", "Cashews"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "What type of bread is traditionally used for making French toast?",
+      "answers": ["Baguette", "Sourdough", "Rye", "Whole wheat"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Which sweet treat is made from whipped egg whites and sugar, then baked until crispy?",
+      "answers": ["Brownies", "Macarons", "Cupcakes", "Donuts"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What is the main ingredient in hummus?",
+      "answers": ["Chickpeas", "Lentils", "Black beans", "Kidney beans"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Which type of pasta is shaped like small rice grains?",
+      "answers": ["Penne", "Fusilli", "Orzo", "Farfalle"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "What is the main ingredient in the Greek dish moussaka?",
+      "answers": ["Zucchini", "Potato", "Tomato", "Eggplant (aubergine)"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which herb is commonly used in pesto sauce?",
+      "answers": ["Basil", "Parsley", "Rosemary", "Thyme"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What is the name of the French dish made with snails?",
+      "answers": ["Coq au Vin", "Escargot", "Bouillabaisse", "Ratatouille"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What is the main ingredient in a classic Caesar salad dressing?",
+      "answers": ["Olive oil", "Balsamic vinegar", "Mayonnaise", "Anchovies"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which type of cheese is traditionally used in a Greek salad (horiatiki)?",
+      "answers": ["Feta", "Cheddar", "Gouda", "Parmesan"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What is the Italian dessert made from ladyfingers, coffee, and mascarpone cheese?",
+      "answers": ["Cannoli", "Tiramisu", "Gelato", "Panna cotta"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which type of bread is commonly used for making a Reuben sandwich?",
+      "answers": ["Rye", "Sourdough", "Baguette", "Ciabatta"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What is the main ingredient in the Indian dish saag paneer?",
+      "answers": ["Cauliflower", "Lentils", "Spinach", "Chickpeas"],
+      "correctAnswerIndex": 2
+    }
+  ]
+}

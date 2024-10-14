@@ -1,0 +1,101 @@
+{
+  "category": "Sports",
+  "quizTitle": "Athletics",
+  "questions": [
+    {
+      "questionTitle": "Which football team has the nickname ‘the Biscuitmen’?",
+      "answers": ["Manchester United", "Liverpool", "Reading FC", "Chelsea"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "What was remarkable about Olympic marathon winner Abebe Bikila?",
+      "answers": ["He ran barefoot", "He set a world record", "He was the youngest marathon winner", "He won two gold medals"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Who won the Wimbledon singles title on his first and only attempt?",
+      "answers": ["Bjorn Borg", "John McEnroe", "Boris Becker", "Pat Cash"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "In which sport do participants compete for Doggett’s Coat and Badge?",
+      "answers": ["Rowing", "Sailing", "Swimming", "Canoeing"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Who became the youngest world heavyweight champion?",
+      "answers": ["Muhammad Ali", "Mike Tyson", "Evander Holyfield", "George Foreman"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "In which sport is ‘laundry’ a technical term?",
+      "answers": ["Tennis", "Golf", "Cricket", "Baseball"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "What number does the bingo call ‘two fat ladies’ refer to?",
+      "answers": ["77", "88", "66", "55"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which British driver finished third in his very first Formula One race in 2007?",
+      "answers": ["Lewis Hamilton", "Jenson Button", "David Coulthard", "Eddie Irvine"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Who, in 2006, emulated her mother by winning the BBC Sports Personality of the Year award?",
+      "answers": ["Serena Williams", "Maria Sharapova", "Venus Williams", "Laura Robson"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What color is the center of the target in archery?",
+      "answers": ["Red", "Blue", "Black", "Yellow"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "What is the most popular sport in the world?",
+      "answers": ["Basketball", "Football (soccer)", "Cricket", "Tennis"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Which sport is LeBron James known for?",
+      "answers": ["Basketball", "Baseball", "Golf", "Tennis"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "In which country were the Olympics invented?",
+      "answers": ["Italy", "China", "Greece", "Egypt"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "What is the name of the annual final playoff game of the NFL?",
+      "answers": ["World Series", "Stanley Cup", "NBA Finals", "Super Bowl"],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionTitle": "Which country won the Rugby World Cup in 2023?",
+      "answers": ["New Zealand", "England", "South Africa", "Australia"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionTitle": "In which city were the first Olympics in the Southern Hemisphere held?",
+      "answers": ["Sydney", "Rio de Janeiro", "Melbourne", "Athens"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "What is the name of the black disc used in ice hockey?",
+      "answers": ["Puck", "Ball", "Disk", "Biscuit"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionTitle": "Which country won the first FIFA World Cup?",
+      "answers": ["Argentina", "Uruguay", "Italy", "Brazil"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Who won the first ICC Cricket World Cup?",
+      "answers": ["India", "West Indies", "England", "Australia"],
+      "correctAnswerIndex": 1
+    }
+  ]
+}

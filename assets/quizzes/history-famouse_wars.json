@@ -1,0 +1,76 @@
+{
+    "category": "History",
+    "quizTitle": "Famous Wars",
+    "questions": [
+        {
+            "questionTitle": "When did WWI end?",
+            "answers": [
+                "1914",
+                "1918",
+                "1938",
+                "1945"
+            ],
+            "correctAnswerIndex": 0
+        },
+        {
+            "questionTitle": "In the 1970s what disco anthem by Gloria Gaynor became an anthem of resilience and empowerment?",
+            "answers": [
+                "Le Freak",
+                "Stayin Alive",
+                "I Will Survive",
+                "Disco Inferno 1"
+            ],
+            "correctAnswerIndex": 2
+        },
+        {
+            "questionTitle": "What popular toy introduced in the 1970s featured interlocking plastic bricks that sparked creativity in children and adults?",
+            "answers": [
+                "Cabbage Patch Kids",
+                "Rubiks Cube",
+                "Hot Wheels",
+                "LEGO 1"
+            ],
+            "correctAnswerIndex": 3
+        },
+        {
+            "questionTitle": "Which political scandal of the 1970s led to the resignation of President Richard Nixon?",
+            "answers": [
+                "Watergate Scandal",
+                "IranContra Affair",
+                "Teapot Dome Scandal",
+                "Lewinsky Scandal 1"
+            ],
+            "correctAnswerIndex": 0
+        },
+        {
+            "questionTitle": "What groundbreaking computer was introduced by IBM in 1981 making personal computing accessible to a wider audience?",
+            "answers": [
+                "Apple Macintosh",
+                "Commodore 64",
+                "IBM PC",
+                "Atari 2600 1"
+            ],
+            "correctAnswerIndex": 2
+        },
+        {
+            "questionTitle": "What popular dance craze of the 1960s had people twisting their bodies to the music of Chubby Checker?",
+            "answers": [
+                "The Jerk",
+                "The Mashed Potato",
+                "The Twist",
+                "The Watusi 1"
+            ],
+            "correctAnswerIndex": 2
+        },
+        {
+            "questionTitle": "Which feminist icon and author published The Feminine Mystique in 1963 sparking the second wave feminist movement?",
+            "answers": [
+                "Betty Friedan",
+                "Gloria Steinem",
+                "Audre Lorde",
+                "Simone de Beauvoir 1"
+            ],
+            "correctAnswerIndex": 0
+        }
+    ]
+}
