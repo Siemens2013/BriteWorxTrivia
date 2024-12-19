@@ -3,9 +3,11 @@ import 'package:briteworxtrivia/screens/quiz_selection_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:dpad_container/dpad_container.dart';
-
+import 'package:briteworxtrivia/screens/screen_definer.dart';
 import '../main.dart';
 import 'constants.dart';
+import 'package:briteworxtrivia/screens/splash.dart';
+
 
 class GameCategorySelectionScreen extends StatefulWidget {
   const GameCategorySelectionScreen({super.key});
@@ -33,12 +35,12 @@ class _GameCategorySelectionScreenState extends State<GameCategorySelectionScree
       backgroundColor: appBg,
       body: Column(
         children: [
-          const Padding(
+           Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
-              "SELECT A CATEGORY",
+              "SELECT A CATEGORY ",
               style: TextStyle(
-                fontSize: 50,
+                fontSize: fntSize,
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
               ),
@@ -50,7 +52,7 @@ class _GameCategorySelectionScreenState extends State<GameCategorySelectionScree
               children: [
                 SvgPicture.asset("assets/bigShinyBackground.svg"),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 28),
+                  padding: EdgeInsets.symmetric(horizontal: hrzn, vertical: vrt),
                   child: GridView.builder(
                     padding: const EdgeInsets.all(10),
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -88,9 +90,9 @@ class _GameCategorySelectionScreenState extends State<GameCategorySelectionScree
                               Center(
                                 child: Text(
                                   gameCategories[index],
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 38,
+                                    fontSize: fntSizeTxt,
                                     fontWeight: FontWeight.w800,
                                   ),
                                 ),

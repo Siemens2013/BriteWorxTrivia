@@ -35,14 +35,14 @@ class _QuizSelectionScreenState extends State<QuizSelectionScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(4.0),
             child: Row(
               children: [
                 Expanded(child: Container()),
                 Text(
                   widget.categoryTitle,
-                  style: const TextStyle(
-                    fontSize: 50,
+                  style:  TextStyle(
+                    fontSize: fntQzSlc,
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
                   ),
@@ -70,7 +70,7 @@ class _QuizSelectionScreenState extends State<QuizSelectionScreen> {
                             child: Padding(
                               padding: const EdgeInsets.all(3.0),
                               child: SvgPicture.asset('assets/exitButton.svg',
-                                  height: 60),
+                                  height: extBttnSze),
                             )),
                       ),
                     )),
@@ -84,10 +84,10 @@ class _QuizSelectionScreenState extends State<QuizSelectionScreen> {
                 SvgPicture.asset("assets/bigShinyBackground.svg"),
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 48, vertical: 28),
+                      horizontal: 2, vertical: 2),
                   child: GridView.builder(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 4),
+                    padding:  EdgeInsets.symmetric(
+                        horizontal: hrzn, vertical: vrt),
                     gridDelegate:
                     const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, // Two columns
@@ -129,9 +129,9 @@ class _QuizSelectionScreenState extends State<QuizSelectionScreen> {
                                 Center(
                                   child: Text(
                                     quizzes[index],
-                                    style: const TextStyle(
+                                    style:  TextStyle(
                                         color: Colors.white,
-                                        fontSize: 38,
+                                        fontSize: fntSizeQzTlt,
                                         fontWeight: FontWeight.w800),
                                   ),
                                 ),

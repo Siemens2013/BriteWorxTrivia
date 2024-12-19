@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:briteworxtrivia/main.dart';
 import 'package:briteworxtrivia/screens/constants.dart';
 import 'package:briteworxtrivia/screens/quiz_model.dart';
 import 'package:dpad_container/dpad_container.dart';
@@ -60,12 +61,12 @@ class _QuizScreenState extends State<QuizScreen> {
                     : answerChoiceNeutralBg,
                 borderRadius: BorderRadius.circular(20),
               ),
-              height: 60,
+              height: hght2,
               child: Center(
                 child: Text(
                   choice,
                   style:
-                  TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  TextStyle(fontSize: fntVariant, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -132,7 +133,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                           height: MediaQuery.of(context)
                                               .size
                                               .height /
-                                              4,
+                                              sz,
                                           child: Padding(
                                             padding: EdgeInsets.all(8.0),
                                             child: Center(
@@ -142,7 +143,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                                     .questions[questionIndex]
                                                     .questionTitle,
                                                 style: TextStyle(
-                                                    fontSize: 24,
+                                                    fontSize: fntSizeTitle,
                                                     fontWeight:
                                                     FontWeight.w900,
                                                     color: Colors.white),
@@ -151,7 +152,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                             ),
                                           ),
                                         ),
-                                        const SizedBox(height: 16),
+                                            SizedBox(height: hght1),
                                         Row(
                                           children: [
                                             buildAnswerChoice(
@@ -204,7 +205,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                           ],
                                         ),
                                         const SizedBox(
-                                          height: 16,
+                                          height: 8,
                                         ),
                                         SizedBox(
                                           height: 75,
@@ -244,7 +245,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                                         padding: const EdgeInsets.all(2.0),
                                                         child: SvgPicture.asset(
                                                           'assets/showAnswerButton${answered ? 'Disabled' : 'Enabled'}.svg',
-                                                          width: 275,
+                                                          width: wdth1,
                                                         ),
                                                       ))),
                                               const SizedBox(
@@ -295,7 +296,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                                         padding: const EdgeInsets.all(2.0),
                                                         child: SvgPicture.asset(
                                                           'assets/nextButton${answered ? 'Enabled' : 'Disabled'}.svg',
-                                                          width: 50,
+                                                          width: wdth2,
                                                         ),
                                                       ))),
                                             ],
@@ -320,8 +321,8 @@ class _QuizScreenState extends State<QuizScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: 400,
-                            height: 100,
+                            width: wdth,
+                            height: hght,
                             child: Center(
                               child: Stack(
                                 children: [
@@ -330,8 +331,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                   Center(
                                     child: Text(
                                       widget.quiz.quizTitle,
-                                      style: const TextStyle(
-                                        fontSize: 50,
+                                      style:  TextStyle(
+                                        fontSize: fntSizeQzTlt,
                                         color: Colors.white,
                                         fontWeight: FontWeight.w900,
                                       ),
@@ -374,7 +375,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             child: Padding(
                               padding: const EdgeInsets.all(2.0),
                               child: SvgPicture.asset('assets/exitButton.svg',
-                                  height: 60),
+                                  height: extBttnSze),
                             )),
                       ),
                     ),
